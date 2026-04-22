@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[CLIENT_FIRST] [CLIENT_LAST] – Executive Bio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">[CLIENT_FIRST] [CLIENT_LAST]</a>
+    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="onepager.html">One-Pager</a></li>
+      <li><a href="bio.html" class="active">Full Bio</a></li>
+      <li><a href="valueplan.html">Value Plan</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO with stats -->
+  <div class="hero">
+    <div class="hero-photo-wrap">
+      <img src="photo.jpg" alt="[CLIENT_FIRST] [CLIENT_LAST]" class="hero-photo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="hero-photo-placeholder" style="display:none;">[CLIENT_INITIAL]</div>
+    </div>
+    <div class="hero-text">
+      <p class="hero-subtitle">Executive Profile</p>
+      <h1>[CLIENT_FIRST] <em>[CLIENT_MIDDLE_INITIAL].</em> [CLIENT_LAST]</h1>
+      <p class="hero-tags">[SPECIALTY_1] · [SPECIALTY_2] · [SPECIALTY_3]</p>
+      <div class="hero-contact">
+        <span>[LOCATION]</span>
+        <span class="sep">·</span>
+        <a href="mailto:[EMAIL]">[EMAIL]</a>
+        <span class="sep">·</span>
+        <a href="https://[LINKEDIN_URL]" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hero-divider">
+
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-number">[STAT_1_NUM]</div>
+      <div class="stat-label">[STAT_1_LABEL]</div>
+      <div class="stat-sub">[STAT_1_SUB]</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">[STAT_2_NUM]</div>
+      <div class="stat-label">[STAT_2_LABEL]</div>
+      <div class="stat-sub">[STAT_2_SUB]</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">[STAT_3_NUM]</div>
+      <div class="stat-label">[STAT_3_LABEL]</div>
+      <div class="stat-sub">[STAT_3_SUB]</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">[STAT_4_NUM]</div>
+      <div class="stat-label">[STAT_4_LABEL]</div>
+      <div class="stat-sub">[STAT_4_SUB]</div>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY (narrative) -->
+  <div class="content-section">
+    <p class="section-label">Executive Summary</p>
+    <div class="prose">
+      <p>
+        [PARAGRAPH_1 — Opening hook. The big career narrative in one sentence. Who are they, what have they done, at what scale.]
+      </p>
+      <p>
+        [PARAGRAPH_2 — What distinguishes them. The pattern that runs through their career. What they do that others don't.]
+      </p>
+      <p>
+        [PARAGRAPH_3 — The proof. 1-2 signature achievements with numbers. Then close with what they're looking for.]
+      </p>
+      <!-- Add more paragraphs as needed -->
+    </div>
+  </div>
+
+  <!-- CORE EXPERTISE (with descriptions) -->
+  <div class="content-section">
+    <p class="section-label">Core Expertise</p>
+    <div class="expertise-grid">
+
+      <div class="expertise-card">
+        <div class="expertise-title">[EXPERTISE_TITLE_1]</div>
+        <div class="expertise-body">[2-3 sentence description of this expertise area, with a specific proof point or outcome woven in.]</div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-title">[EXPERTISE_TITLE_2]</div>
+        <div class="expertise-body">[2-3 sentence description of this expertise area, with a specific proof point or outcome woven in.]</div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-title">[EXPERTISE_TITLE_3]</div>
+        <div class="expertise-body">[2-3 sentence description of this expertise area, with a specific proof point or outcome woven in.]</div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-title">[EXPERTISE_TITLE_4]</div>
+        <div class="expertise-body">[2-3 sentence description of this expertise area, with a specific proof point or outcome woven in.]</div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-title">[EXPERTISE_TITLE_5]</div>
+        <div class="expertise-body">[2-3 sentence description of this expertise area, with a specific proof point or outcome woven in.]</div>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-title">[EXPERTISE_TITLE_6]</div>
+        <div class="expertise-body">[2-3 sentence description of this expertise area, with a specific proof point or outcome woven in.]</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CAREER HISTORY (detailed) -->
+  <div class="content-section">
+    <p class="section-label">Career Highlights</p>
+    <div class="career-history">
+
+      <div class="career-entry">
+        <div class="career-entry-company">[COMPANY_1]</div>
+        <div class="career-entry-header">
+          <div class="career-entry-title">[JOB_TITLE_1]</div>
+          <div class="career-entry-years">[YEARS_1]</div>
+        </div>
+        <div class="career-entry-body">
+          [Full paragraph career story. What the situation was, what they did, what the result was. Include specific dollar figures, percentages, team sizes. 4-6 sentences.]
+        </div>
+      </div>
+
+      <hr class="career-divider">
+
+      <div class="career-entry">
+        <div class="career-entry-company">[COMPANY_2]</div>
+        <div class="career-entry-header">
+          <div class="career-entry-title">[JOB_TITLE_2]</div>
+          <div class="career-entry-years">[YEARS_2]</div>
+        </div>
+        <div class="career-entry-body">
+          [Full paragraph career story.]
+        </div>
+      </div>
+
+      <hr class="career-divider">
+
+      <div class="career-entry">
+        <div class="career-entry-company">[COMPANY_3]</div>
+        <div class="career-entry-header">
+          <div class="career-entry-title">[JOB_TITLE_3]</div>
+          <div class="career-entry-years">[YEARS_3]</div>
+        </div>
+        <div class="career-entry-body">
+          [Full paragraph career story.]
+        </div>
+      </div>
+
+      <hr class="career-divider">
+
+      <div class="career-entry">
+        <div class="career-entry-company">[COMPANY_4]</div>
+        <div class="career-entry-header">
+          <div class="career-entry-title">[JOB_TITLE_4]</div>
+          <div class="career-entry-years">[YEARS_4]</div>
+        </div>
+        <div class="career-entry-body">
+          [Full paragraph career story.]
+        </div>
+      </div>
+
+      <!-- Add more entries as needed -->
+
+    </div>
+  </div>
+
+  <!-- WHAT I'M LOOKING FOR -->
+  <div class="content-section">
+    <div class="looking-for">
+      <p class="section-label">What [CLIENT_FIRST] Is Looking For</p>
+      <p>
+        [PARAGRAPH — describe the types of organizations they want to join. What problem do they want to solve? What stage of company? What kind of culture? Speak to the hiring manager reading this.]
+      </p>
+      <p>
+        [PARAGRAPH — describe what they bring on day one and why that matters to the right organization. End with a subtle call to action.]
+      </p>
+      <div class="role-tags">
+        <span class="role-tag">[ROLE_1]</span>
+        <span class="role-tag">[ROLE_2]</span>
+        <span class="role-tag">[ROLE_3]</span>
+        <span class="role-tag">[ROLE_4]</span>
+        <span class="role-tag">Fractional / Advisory</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<footer>
+  <div class="footer-name">[CLIENT_FIRST] [CLIENT_LAST]</div>
+  <div class="footer-contact">
+    <span>[LOCATION]</span>
+    <a href="mailto:[EMAIL]">[EMAIL]</a>
+    <a href="https://[LINKEDIN_URL]" target="_blank">LinkedIn</a>
+  </div>
+  <!-- TALENTGUY CREDIT: Remove for white-label -->
+  <div class="footer-credit">Executive profile built with <a href="https://talentguy.io" target="_blank">TalentGuy.io</a></div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[CLIENT_FIRST] [CLIENT_LAST] – Executive One-Pager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">[CLIENT_FIRST] [CLIENT_LAST]</a>
+    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="onepager.html" class="active">One-Pager</a></li>
+      <li><a href="bio.html">Full Bio</a></li>
+      <li><a href="valueplan.html">Value Plan</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO (compact) -->
+  <div class="hero">
+    <div class="hero-photo-wrap">
+      <img src="photo.jpg" alt="[CLIENT_FIRST] [CLIENT_LAST]" class="hero-photo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="hero-photo-placeholder" style="display:none;">[CLIENT_INITIAL]</div>
+    </div>
+    <div class="hero-text">
+      <p class="hero-subtitle">Executive Profile</p>
+      <h1>[CLIENT_FIRST] <em>[CLIENT_MIDDLE_INITIAL].</em> [CLIENT_LAST]</h1>
+      <p class="hero-tags">[SPECIALTY_1] · [SPECIALTY_2] · [SPECIALTY_3] · [SPECIALTY_4]</p>
+      <div class="hero-contact">
+        <span>[LOCATION]</span>
+        <span class="sep">·</span>
+        <a href="mailto:[EMAIL]">[EMAIL]</a>
+        <span class="sep">·</span>
+        <span>[PHONE]</span>
+        <span class="sep">·</span>
+        <a href="https://[LINKEDIN_URL]" target="_blank">linkedin.com/in/[LINKEDIN_HANDLE]</a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hero-divider">
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-number">[STAT_1_NUM]</div>
+      <div class="stat-label">[STAT_1_LABEL]</div>
+      <div class="stat-sub">[STAT_1_SUB]</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">[STAT_2_NUM]</div>
+      <div class="stat-label">[STAT_2_LABEL]</div>
+      <div class="stat-sub">[STAT_2_SUB]</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">[STAT_3_NUM]</div>
+      <div class="stat-label">[STAT_3_LABEL]</div>
+      <div class="stat-sub">[STAT_3_SUB]</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">[STAT_4_NUM]</div>
+      <div class="stat-label">[STAT_4_LABEL]</div>
+      <div class="stat-sub">[STAT_4_SUB]</div>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="content-section">
+    <p class="section-label">Executive Summary</p>
+    <div class="prose">
+      <p>
+        [EXECUTIVE_SUMMARY — 3-4 sentences. Lead with the dollar figure or the signature achievement. End with what makes them different. This is the only thing some recruiters will read.]
+      </p>
+    </div>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="content-section">
+    <p class="section-label">Core Competencies</p>
+    <div class="competencies-grid">
+      <div class="competency">[COMPETENCY_1]</div>
+      <div class="competency">[COMPETENCY_2]</div>
+      <div class="competency">[COMPETENCY_3]</div>
+      <div class="competency">[COMPETENCY_4]</div>
+      <div class="competency">[COMPETENCY_5]</div>
+      <div class="competency">[COMPETENCY_6]</div>
+      <div class="competency">[COMPETENCY_7]</div>
+      <div class="competency">[COMPETENCY_8]</div>
+    </div>
+  </div>
+
+  <!-- CAREER HIGHLIGHTS -->
+  <div class="content-section">
+    <p class="section-label">Career Highlights</p>
+    <div class="career-grid">
+
+      <div class="career-card">
+        <div class="career-card-title">[JOB_TITLE_1]</div>
+        <div class="career-card-company">[COMPANY_1] ([YEARS_1])</div>
+        <p>[2-3 sentences. Specific numbers. What they built, what it delivered.]</p>
+      </div>
+
+      <div class="career-card">
+        <div class="career-card-title">[JOB_TITLE_2]</div>
+        <div class="career-card-company">[COMPANY_2] ([YEARS_2])</div>
+        <p>[2-3 sentences. Specific numbers. What they built, what it delivered.]</p>
+      </div>
+
+      <div class="career-card">
+        <div class="career-card-title">[JOB_TITLE_3]</div>
+        <div class="career-card-company">[COMPANY_3] ([YEARS_3])</div>
+        <p>[2-3 sentences. Specific numbers. What they built, what it delivered.]</p>
+      </div>
+
+      <div class="career-card">
+        <div class="career-card-title">[JOB_TITLE_4]</div>
+        <div class="career-card-company">[COMPANY_4] ([YEARS_4])</div>
+        <p>[2-3 sentences. Specific numbers. What they built, what it delivered.]</p>
+      </div>
+
+      <!-- Add more pairs as needed -->
+
+    </div>
+  </div>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <div class="content-section">
+    <p class="section-label">Education &amp; Certifications</p>
+    <div class="edu-section">
+
+      <div class="edu-row">
+        <div class="edu-label">Education</div>
+        <div class="edu-items">
+          [DEGREE_1] — [SCHOOL_1]<br>
+          [DEGREE_2] — [SCHOOL_2]<br>
+          <!-- Add Executive Programs if relevant -->
+          [EXEC_PROGRAMS]
+        </div>
+      </div>
+
+      <div class="edu-row">
+        <div class="edu-label">Certifications</div>
+        <div class="edu-items">
+          [CERT_1] · [CERT_2] · [CERT_3] · [CERT_4]
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TARGET ROLES -->
+  <div class="content-section">
+    <div class="looking-for">
+      <p class="section-label">Currently Exploring</p>
+      <div class="role-tags">
+        <span class="role-tag">[ROLE_1]</span>
+        <span class="role-tag">[ROLE_2]</span>
+        <span class="role-tag">[ROLE_3]</span>
+        <span class="role-tag">[ROLE_4]</span>
+        <span class="role-tag">[ROLE_5]</span>
+        <span class="role-tag">Fractional / Advisory</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<footer>
+  <div class="footer-name">[CLIENT_FIRST] [CLIENT_LAST]</div>
+  <div class="footer-contact">
+    <span>[LOCATION]</span>
+    <a href="mailto:[EMAIL]">[EMAIL]</a>
+    <a href="https://[LINKEDIN_URL]" target="_blank">LinkedIn</a>
+  </div>
+  <!-- TALENTGUY CREDIT: Remove for white-label -->
+  <div class="footer-credit">Executive profile built with <a href="https://talentguy.io" target="_blank">TalentGuy.io</a></div>
+</footer>
+
+</body>
+</html>

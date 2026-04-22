@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[CLIENT_FIRST] [CLIENT_LAST] – 30·60·90 Day Value Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">[CLIENT_FIRST] [CLIENT_LAST]</a>
+    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="onepager.html">One-Pager</a></li>
+      <li><a href="bio.html">Full Bio</a></li>
+      <li><a href="valueplan.html" class="active">Value Plan</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO (minimal) -->
+  <div class="hero" style="padding-bottom: 20px;">
+    <div class="hero-photo-wrap">
+      <img src="photo.jpg" alt="[CLIENT_FIRST] [CLIENT_LAST]" class="hero-photo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="hero-photo-placeholder" style="display:none;">[CLIENT_INITIAL]</div>
+    </div>
+    <div class="hero-text">
+      <p class="hero-subtitle">Executive Profile</p>
+      <h1>[CLIENT_FIRST] <em>[CLIENT_MIDDLE_INITIAL].</em> [CLIENT_LAST]</h1>
+      <p class="hero-tags">[SPECIALTY_1] · [SPECIALTY_2] · [SPECIALTY_3]</p>
+    </div>
+  </div>
+
+  <hr class="hero-divider" style="margin-bottom: 40px;">
+
+  <!-- INTRO -->
+  <div class="content-section">
+    <p class="section-label">30 · 60 · 90 Day Value Plan</p>
+    <div class="prose">
+      <p>[VALUE_PLAN_INTRO — 1-2 sentences. Describe the philosophy behind the plan. Something like: "A structured approach to delivering measurable impact from day one — balancing rapid discovery with disciplined execution across [key domains]."]</p>
+    </div>
+  </div>
+
+  <!-- THE PLAN -->
+  <div class="value-plan">
+
+    <!-- DAY 30 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <div class="day-number">Day 30</div>
+        <div class="day-theme">[DAY_30_THEME — e.g. LISTEN · LEARN · MAP]</div>
+      </div>
+      <div class="day-card-body">
+        <div class="day-section-label">[DAY_30_SECTION — e.g. Foundation &amp; Discovery]</div>
+        <ul class="day-bullets">
+          <li>[Day 30 action bullet 1 — specific, active verb, outcome-oriented]</li>
+          <li>[Day 30 action bullet 2]</li>
+          <li>[Day 30 action bullet 3]</li>
+          <li>[Day 30 action bullet 4]</li>
+          <li>[Day 30 action bullet 5]</li>
+        </ul>
+        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--divider);">
+          <div class="day-section-label" style="margin-bottom: 8px;">Deliverable</div>
+          <p style="font-size: 14px; color: var(--text-light); line-height: 1.65;">
+            [What they hand to the CRO/CEO/Board at Day 30. Tangible artifact. E.g., "A written current-state assessment covering pipeline health, team gaps, and the top 3 changes I'd recommend."]
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 60 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <div class="day-number">Day 60</div>
+        <div class="day-theme">[DAY_60_THEME — e.g. PRIORITIZE · ALIGN · QUICK WINS]</div>
+      </div>
+      <div class="day-card-body">
+        <div class="day-section-label">[DAY_60_SECTION — e.g. Strategic Alignment &amp; Early Wins]</div>
+        <ul class="day-bullets">
+          <li>[Day 60 action bullet 1]</li>
+          <li>[Day 60 action bullet 2]</li>
+          <li>[Day 60 action bullet 3]</li>
+          <li>[Day 60 action bullet 4]</li>
+          <li>[Day 60 action bullet 5]</li>
+        </ul>
+        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--divider);">
+          <div class="day-section-label" style="margin-bottom: 8px;">Deliverable</div>
+          <p style="font-size: 14px; color: var(--text-light); line-height: 1.65;">
+            [What they hand over at Day 60. First closed win, pipeline improvement, team plans, etc.]
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 90 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <div class="day-number">Day 90</div>
+        <div class="day-theme">[DAY_90_THEME — e.g. EXECUTE · BUILD · GOVERN]</div>
+      </div>
+      <div class="day-card-body">
+        <div class="day-section-label">[DAY_90_SECTION — e.g. Transformation in Motion]</div>
+        <ul class="day-bullets">
+          <li>[Day 90 action bullet 1]</li>
+          <li>[Day 90 action bullet 2]</li>
+          <li>[Day 90 action bullet 3]</li>
+          <li>[Day 90 action bullet 4]</li>
+          <li>[Day 90 action bullet 5]</li>
+        </ul>
+        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--divider);">
+          <div class="day-section-label" style="margin-bottom: 8px;">Deliverable</div>
+          <p style="font-size: 14px; color: var(--text-light); line-height: 1.65;">
+            [What Day 90 looks like. On-pace attainment, measurable first ROI milestone, team operating with shared standards, etc.]
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 120 (Optional — use for strategic/CxO roles. Remove for VP/Director-level) -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <div class="day-number">Day 120</div>
+        <div class="day-theme">[DAY_120_THEME — e.g. SCALE · SUSTAIN · LEAD]</div>
+      </div>
+      <div class="day-card-body">
+        <div class="day-section-label">[DAY_120_SECTION — e.g. Durable Competitive Advantage]</div>
+        <ul class="day-bullets">
+          <li>[Day 120 action bullet 1]</li>
+          <li>[Day 120 action bullet 2]</li>
+          <li>[Day 120 action bullet 3]</li>
+          <li>[Day 120 action bullet 4]</li>
+          <li>[Day 120 action bullet 5]</li>
+        </ul>
+        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--divider);">
+          <div class="day-section-label" style="margin-bottom: 8px;">Deliverable</div>
+          <p style="font-size: 14px; color: var(--text-light); line-height: 1.65;">
+            [Board-level narrative, 12-month strategy, enterprise positioned for sustained competitive advantage.]
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /value-plan -->
+
+  <!-- WHAT I'M LOOKING FOR -->
+  <div class="content-section" style="margin-top: 48px;">
+    <div class="looking-for">
+      <p class="section-label">What [CLIENT_FIRST] Is Looking For</p>
+      <p>
+        [SHORT VERSION — 2 sentences. Who they want to work with and why. Keep it punchy here since the full version is on the Bio page.]
+      </p>
+      <div class="role-tags">
+        <span class="role-tag">[ROLE_1]</span>
+        <span class="role-tag">[ROLE_2]</span>
+        <span class="role-tag">[ROLE_3]</span>
+        <span class="role-tag">[ROLE_4]</span>
+        <span class="role-tag">Fractional / Advisory</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<footer>
+  <div class="footer-name">[CLIENT_FIRST] [CLIENT_LAST]</div>
+  <div class="footer-contact">
+    <span>[LOCATION]</span>
+    <a href="mailto:[EMAIL]">[EMAIL]</a>
+    <a href="https://[LINKEDIN_URL]" target="_blank">LinkedIn</a>
+  </div>
+  <!-- TALENTGUY CREDIT: Remove for white-label -->
+  <div class="footer-credit">Executive profile built with <a href="https://talentguy.io" target="_blank">TalentGuy.io</a></div>
+</footer>
+
+</body>
+</html>

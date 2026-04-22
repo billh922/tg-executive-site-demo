@@ -1,0 +1,822 @@
+/* ============================================================
+   TALENTGUY.IO — Executive Site Template
+   Shared Stylesheet
+
+   THEMING: Change CSS variables in :root to rebrand per client.
+   ============================================================ */
+
+:root {
+  --nav-bg: #0F1923;
+  --nav-text: #ffffff;
+  --gold: #C9A84C;
+  --gold-hover: #E8D5A3;
+  --gold-dim: rgba(201, 168, 76, 0.15);
+  --bg: #F8F5EF;
+  --bg-dark: #0F1923;
+  --text: #1A1A1A;
+  --text-light: #555555;
+  --text-muted: #888888;
+  --divider: #D4C5A9;
+  --card-bg: #FFFFFF;
+  --card-border: #E8E0D0;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --card-shadow-hover: 0 6px 24px rgba(0,0,0,0.12);
+  --max-width: 960px;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --nav-height: 60px;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--gold-hover); }
+
+img { max-width: 100%; display: block; }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; }
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+  background: rgba(201,168,76,0.1);
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid var(--gold);
+  border-radius: 4px 4px 0 0;
+}
+
+/* Hamburger (mobile) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: rgba(255,255,255,0.8);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+/* ============================================================
+   PAGE WRAPPER
+   ============================================================ */
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.hero {
+  padding: 56px 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-photo-wrap {
+  flex-shrink: 0;
+}
+
+.hero-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 0 6px var(--gold-dim);
+}
+
+.hero-photo-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 0 6px var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: var(--gold);
+  font-family: var(--font-display);
+}
+
+.hero-text h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.hero-text h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.hero-tags {
+  font-size: 14px;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.hero-contact {
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  align-items: center;
+}
+
+.hero-contact a { color: var(--gold); font-weight: 500; }
+.hero-contact a:hover { color: var(--gold-hover); }
+.hero-contact .sep { color: var(--divider); }
+
+.hero-divider {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin: 0 0 0;
+}
+
+/* ============================================================
+   STATS BAR
+   ============================================================ */
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 32px 0;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.stat {
+  padding: 24px 20px;
+  text-align: center;
+  border-right: 1px solid var(--card-border);
+}
+
+.stat:last-child { border-right: none; }
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.stat-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ============================================================
+   POSITIONING STATEMENT
+   ============================================================ */
+
+.positioning {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 48px;
+  padding: 0 16px;
+}
+
+.positioning strong { font-weight: 600; }
+
+/* ============================================================
+   DOCUMENT CARDS (Home page)
+   ============================================================ */
+
+.doc-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.doc-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 28px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.25s;
+  color: var(--text);
+}
+
+.doc-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--gold);
+  transform: translateY(-1px);
+  color: var(--text);
+}
+
+.doc-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  width: 48px;
+  text-align: center;
+}
+
+.doc-info { flex: 1; }
+
+.doc-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.doc-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.doc-cta {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   CONTENT SECTIONS
+   ============================================================ */
+
+.content-section {
+  margin-bottom: 56px;
+}
+
+.prose {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.prose p { margin-bottom: 18px; }
+.prose p:last-child { margin-bottom: 0; }
+.prose strong { font-weight: 600; }
+
+/* ============================================================
+   COMPETENCIES GRID
+   ============================================================ */
+
+.competencies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.competency {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: var(--text);
+  border-bottom: 1px solid var(--card-border);
+  border-right: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.competency:nth-child(even) { border-right: none; }
+.competency:nth-last-child(-n+2) { border-bottom: none; }
+
+.competency::before {
+  content: '›';
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   CAREER HIGHLIGHTS GRID (One-Pager)
+   ============================================================ */
+
+.career-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.career-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 20px 22px;
+  box-shadow: var(--card-shadow);
+}
+
+.career-card-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--gold);
+  margin-bottom: 2px;
+}
+
+.career-card-company {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.career-card p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-light);
+}
+
+/* ============================================================
+   CAREER HISTORY (Bio page - detailed)
+   ============================================================ */
+
+.career-history { display: flex; flex-direction: column; gap: 36px; }
+
+.career-entry {}
+
+.career-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.career-entry-company {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2px;
+}
+
+.career-entry-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.career-entry-years {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.career-entry-body {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--text-light);
+}
+
+.career-divider {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin-top: 36px;
+}
+
+/* ============================================================
+   EXPERTISE AREAS (Bio page)
+   ============================================================ */
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.expertise-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 22px 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.expertise-title {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--text);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.expertise-body {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-light);
+}
+
+/* ============================================================
+   VALUE PLAN (Day cards)
+   ============================================================ */
+
+.value-plan { display: flex; flex-direction: column; gap: 32px; }
+
+.day-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+}
+
+.day-card-header {
+  background: var(--nav-bg);
+  color: white;
+  padding: 20px 28px;
+}
+
+.day-number {
+  font-family: var(--font-display);
+  font-size: 36px;
+  color: var(--gold);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.day-theme {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+}
+
+.day-card-body {
+  background: var(--card-bg);
+  padding: 24px 28px;
+}
+
+.day-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.day-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day-bullets li {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.day-bullets li::before {
+  content: '—';
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ============================================================
+   LOOKING FOR SECTION
+   ============================================================ */
+
+.looking-for {
+  background: var(--nav-bg);
+  color: white;
+  border-radius: 10px;
+  padding: 36px 40px;
+  margin-top: 16px;
+}
+
+.looking-for .section-label {
+  color: var(--gold);
+}
+
+.looking-for .section-label::before {
+  background: var(--gold);
+}
+
+.looking-for p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 16px;
+}
+
+.looking-for p:last-child { margin-bottom: 0; }
+
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.role-tag {
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ============================================================
+   EDUCATION & CERTS
+   ============================================================ */
+
+.edu-section {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 24px 28px;
+  box-shadow: var(--card-shadow);
+}
+
+.edu-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.edu-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.edu-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.edu-items {
+  font-size: 13.5px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  background: var(--nav-bg);
+  color: rgba(255,255,255,0.6);
+  padding: 28px 32px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 80px;
+}
+
+footer .footer-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: white;
+  margin-bottom: 6px;
+}
+
+footer .footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+footer a { color: var(--gold); }
+footer a:hover { color: var(--gold-hover); }
+
+.footer-credit {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-credit a { color: rgba(201,168,76,0.5); }
+.footer-credit a:hover { color: var(--gold); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 720px) {
+  nav { padding: 0 20px; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    flex-direction: column;
+    padding: 16px 20px 20px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    gap: 4px;
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+
+  .hero { flex-direction: column; gap: 24px; text-align: center; padding: 36px 0 28px; }
+  .hero-contact { justify-content: center; }
+
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3) { border-right: 1px solid var(--card-border); }
+  .stat { border-bottom: 1px solid var(--card-border); }
+  .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
+
+  .competencies-grid { grid-template-columns: 1fr; }
+  .competency { border-right: none !important; }
+  .competency:nth-last-child(-n+2) { border-bottom: 1px solid var(--card-border); }
+  .competency:last-child { border-bottom: none; }
+
+  .career-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr; }
+
+  .looking-for { padding: 28px 24px; }
+
+  .page { padding: 0 16px 60px; }
+}
+
+/* ============================================================
+   PRINT STYLES (One-Pager only)
+   ============================================================ */
+
+@media print {
+  nav, footer { display: none; }
+  body { background: white; font-size: 12px; }
+  .page { padding: 0; max-width: 100%; }
+  .hero { padding: 20px 0 16px; }
+  .hero-photo { width: 80px; height: 80px; }
+  .stats-bar { margin: 16px 0; }
+  .stat-number { font-size: 24px; }
+  .content-section { margin-bottom: 24px; page-break-inside: avoid; }
+  .career-grid { gap: 10px; }
+  .career-card { padding: 12px 14px; }
+  .day-card { page-break-inside: avoid; }
+}
