@@ -748,15 +748,15 @@ footer a { color: var(--gold); }
 footer a:hover { color: var(--gold-hover); }
 
 .footer-credit {
-  font-size: 11px;
-  color: rgba(255,255,255,0.3);
+  font-size: 13px;
+  color: var(--gold);
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-.footer-credit a { color: rgba(201,168,76,0.5); }
-.footer-credit a:hover { color: var(--gold); }
+.footer-credit a { color: var(--gold); }
+.footer-credit a:hover { color: var(--gold-hover); }
 
 /* ============================================================
    RESPONSIVE
